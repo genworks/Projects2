@@ -1,3 +1,5 @@
+***Change the folder name from Projects2 to Projects
+
 I make videos to illustrate how it works. I hope it also works on your computer.
 
 01 Setup
