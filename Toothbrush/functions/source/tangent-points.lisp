@@ -53,7 +53,7 @@
 		   (add-vectors (matrix*vector Rt (make-vector o2t2x* o2t2y* 0)) (the-object arc-1 :center))
 		)))))))))
   
-(excl:without-package-locks 
+(#+allegro excl:without-package-locks #-allegro progn
   (define-object-amendment geom-base:arc (geom-base::arcoid-mixin geom-base:base-object)
 
     :functions

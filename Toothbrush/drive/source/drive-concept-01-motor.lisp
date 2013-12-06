@@ -48,10 +48,11 @@
   :objects
   (
    (motor-step :type 'step-reader
-	       :file-name (merge-pathnames (the motor-folder) 
-					   (make-pathname 
-					    :name (the motor-file-name)
-					    :type (the motor-file-format)))
+	       :file-name (merge-pathnames (merge-pathnames (the motor-folder) 
+							    (make-pathname 
+							     :name (the motor-file-name)
+							     :type (the motor-file-format)))
+					   *default-pathname-defaults*)
 	       :hidden? t
 	       )
    (motor :type 'transformed-solid

@@ -24,20 +24,25 @@
 
 ;(defpackage :E-Toothbrush)
 
-(gdl:define-package :E-Toothbrush (:use :surf)
-  (:nicknames :E-Toothbrush) (:export #:assembly))
+
+#+nil
+(gdl:define-package :E-Toothbrush 
+    (:export #:assembly))
 
 (gwl:define-package :E-Toothbrush 
-  ;  (:documentation #.(glisp:system-description :E-Toothbrush))
-  (:nicknames :E-Toothbrush) 
-  (:export #:assembly)
-  (:use :surf))
+  (:export #:assembly))
 
 (in-package :E-Toothbrush)
 
+
+#+nil
 (defparameter *path-name* (merge-pathnames 
 			   (pathname "Toothbrush\\") 
 			   (merge-pathnames (pathname "Projects\\"))))
+
+(defparameter *path-name* (merge-pathnames 
+			   (pathname "Toothbrush/") 
+			   (merge-pathnames (pathname "Projects/"))))
 
 (defparameter *global-accuracy* 3) ; 0.001
 
