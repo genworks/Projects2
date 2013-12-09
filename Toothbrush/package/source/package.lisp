@@ -40,9 +40,19 @@
 			   (pathname "Toothbrush\\") 
 			   (merge-pathnames (pathname "Projects\\"))))
 
-(defparameter *path-name* (merge-pathnames 
-			   (pathname "Toothbrush/") 
-			   (merge-pathnames (pathname "Projects/"))))
+(defparameter *toothbrush-home* (probe-file 
+				 (make-pathname :name nil :type nil :defaults (merge-pathnames "../../" 
+											       (glisp:source-pathname)))))
+
+
+
+(defparameter *path-name* *toothbrush-home*)
+
+#+nil
+(defparameter *path-name* (merge-pathnames (merge-pathnames 
+					    (pathname "Toothbrush/") 
+					    (merge-pathnames (pathname "Projects/")))
+					   *toothbrush-home*))
 
 (defparameter *global-accuracy* 3) ; 0.001
 

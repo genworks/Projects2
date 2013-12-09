@@ -94,3 +94,9 @@
 	    )
    )
   )
+
+
+(define-object tasty (tasty:assembly)
+  :computed-slots ((root-object-type 'assembly)))
+
+(publish-gwl-app "/toothbrush" 'tasty)
